@@ -4,9 +4,28 @@
   https://developers.google.com/maps/documentation/javascript/examples/map-latlng-literal
 */
 
+function removeSpot(curLocation) {
+  // Check if location is a spot vs nearest
+  let curLocIndex = parkingSpots.indexOf(curLocation);
+  if (curLocIndex > -1) {
+    parkingSpots.splice(curLocIndex, 1);
+  } else {
+    // 0.1 miles is a good enough approximation for "near you" at the moment.
+    let closeSpots = findSpots(curLocation, 0.1);
+    if (closeSpots.length != 0) {
+      let spotIndex = parkingSpots.indexOf(closeSpots[0]);
+      parkingSpots.splice(spotIndex, 1);
+    }
+  }
+}
+
 function findSpots(curLocation, radius) {
   let closeSpots = [];
   for (let i = 0; i < parkingSpots.length; i++) {
+    if (parkingSpots[i] == curLocation) {
+      // Skip self
+      continue;
+    }
     if (checkSpot(curLocation, parkingSpots[i], radius)) {
       closeSpots.push(parkingSpots[i]);
     }
@@ -50,5 +69,13 @@ parkingSpots.push(empireStateBuilding);
 
 // testLocation (Macy's) is within 1 mile from empireStateBuilding
 let testLocation = {lat: 40.750797, lng: -73.989578, address: "151 W 34th St, New York, NY 10001", name: "Macy's"};
-
-console.log(findSpots(testLocation, 1));
+// Can ignore, more testing
+console.log("There are " + parkingSpots.length + " open spots.");
+console.log(parkingSpots);
+console.log("We are looking for a spot near " + testLocation.address + ".");
+console.log("Here's what we found:");
+// Grabbing first instead of nearest
+let foundSpot = findSpots(testLocation, 1)[0];
+console.log(foundSpot);
+removeSpot(foundSpot);
+console.log("Removing spot. There are now " + parkingSpots.length + " open spots.");
