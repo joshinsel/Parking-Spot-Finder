@@ -123,7 +123,8 @@ function distance(x1, y1, x2, y2) {
 
 // Hardcoded locations
 let parkingSpots = [];
-let goldmanSachsOffice = {lat: 40.7131, lng: -74.0338, address: "200 West Street New York, NY 10282", name: "Goldman Sachs Tower" };
+// let goldmanSachsOffice = {lat: 40.7131, lng: -74.0338, address: "200 West Street New York, NY 10282", name: "Goldman Sachs Tower" };
+let goldmanSachsOffice = {lat: 40.7149, lng: -74.0145, address: "200 West Street New York, NY 10282", name: "Goldman Sachs Tower" };
 let empireStateBuilding = {lat: 40.748817, lng: -73.985428, address: "20 W 34th St, New York, NY 10001", name: "Empire State Building"};
 parkingSpots.push(goldmanSachsOffice);
 parkingSpots.push(empireStateBuilding);
