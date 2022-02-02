@@ -38,11 +38,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+.select-panel {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: flex-end;
+  width: 50%;
+}
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
