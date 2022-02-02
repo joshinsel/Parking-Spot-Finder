@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import Header from "../Components/Header"
 import Map from "../Components/map/Map"
@@ -6,8 +6,9 @@ import { findSpots } from "../utils"
 
 const FindSpot = () => {
   const [distance, setDistance] = useState(0)
+  const [spots, setSpots] = useState([])
 
-  const location = {lat: 40.748817, lng: -73.985428, address: "20 W 34th St, New York, NY 10001", name: "Empire State Building"};
+  const defaultLocation = {lat: 40.748817, lng: -73.985428, address: "20 W 34th St, New York, NY 10001", name: "Empire State Building"};
   const testLocation = {lat: 40.750797, lng: -73.989578, address: "151 W 34th St, New York, NY 10001", name: "Macy's"};
 
 
@@ -17,7 +18,10 @@ const FindSpot = () => {
 
   const submitHandler = event => {
     event.preventDefault()
-    console.log(findSpots(testLocation, distance))
+    //console.log(findSpots(testLocation, distance))
+    const newSpots = findSpots(testLocation, distance)
+    setSpots(newSpots)
+    console.log(spots)
   }
 
   return (
@@ -26,8 +30,9 @@ const FindSpot = () => {
       <div className="select-panel">
         <div className="map-section">
           <Map
-            location={location}
+            defaultLocation={defaultLocation}
             zoomLevel={14}
+            spots={spots}
           />
         </div>
         <div className="select-section">
@@ -44,6 +49,7 @@ const FindSpot = () => {
                 <option value=".25">0.25 mi</option>
                 <option value=".5">0.5 mi</option>
                 <option value="1">1 mi</option>
+                <option value="5">5 mi</option>
               </select>
               <input type="submit" value="Submit" />
             </form>  
