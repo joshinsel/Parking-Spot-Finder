@@ -34,7 +34,7 @@ plt.show()
 
 
     
-![png](output_6_0.png)
+![png](images/output_6_0.png)
     
 
 
@@ -620,7 +620,7 @@ predictions.plot(
 
 
     
-![png](output_32_0.png)
+![png](images/output_32_0.png)
     
 
 
@@ -638,7 +638,7 @@ predictions[predictions.latitude < -80].plot(
 
 
     
-![png](output_34_0.png)
+![png](images/output_34_0.png)
     
 
 
@@ -654,7 +654,7 @@ predictions[predictions.latitude > -80].plot(
 
 
     
-![png](output_35_0.png)
+![png](images/output_35_0.png)
     
 
 
