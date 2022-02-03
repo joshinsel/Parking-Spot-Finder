@@ -1,6 +1,6 @@
 We will sample two seperate locations with random data in effort to simulate a predictive algorithm on parking wait times for the future when the data becomes available.
 
-NYC has mean 15-20, low 5 high as 60
+NYC has mean 15-20 minutes, low 5 min and high as 60 min.
 We know that New York City has an average wait time of approximately 17 minutes, with a bit of standard deviation. We'll simplify to $\mu_{NYC} = 17$ and $\sigma_{NYC} = 5$
 
 Let's generate some random data points with this in mind.
@@ -607,7 +607,7 @@ predictions
 
 
 
-We see a score of 51.56%, slighlt above average for our randomly generated data, and predictions matching the range of the coordinate constraints per city. We can visually plot this as so:
+We see a score of 51.56%, slightly above average for our randomly generated data, and predictions matching the range of the coordinate constraints per city. We can visually plot this as so:
 
 
 ```python
@@ -624,7 +624,7 @@ predictions.plot(
     
 
 
-We can see close up these are two clusters matching the original ranges and coordinates.
+We can see close up these are two clusters matching the original ranges and coordinates. Left one hovering over -88 degrees of latitude there is Chicago's cluster of waiting times and on the right there is NYC's at -74 degrees.
 
 
 ```python
