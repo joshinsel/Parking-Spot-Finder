@@ -106,6 +106,8 @@ public class kdTree {
 		root = deleteNode(root, latitude, longitude, 0);
 	}
 	
+	/*
+	
 	private double distance(double[] point1, double[] point2) {
 		double dist = 0.0;
 		for (int i = 0; i < 2; i++) {
@@ -132,11 +134,14 @@ public class kdTree {
 		}
 	}
 	
+	
 	public Node[] findNearest(double latitude, double longitude, int k) {
 		ArrayDeque<Node> nearestNodes = new ArrayDeque<>(); //Queue
 		minDist = Double.MAX_VALUE;
 		
 	}
+	
+	*/
 }
 
 class Node {
