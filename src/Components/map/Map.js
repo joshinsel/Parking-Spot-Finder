@@ -5,7 +5,13 @@ import locationIcon from '@iconify/icons-mdi/map-marker'
 
 const LocationPin = ({ text, color }) => (
   <div className="pin">
-    <Icon icon={locationIcon} className="pin-icon" color={color} />
+    <Icon 
+      icon={locationIcon} 
+      className="pin-icon" 
+      color={color} 
+      width="25"
+      height="25"
+    />
     <p className="pin-text">{text}</p>
   </div>
 )
@@ -20,7 +26,7 @@ const Map = ({ spots, zoomLevel, defaultLocation }) => (
         defaultCenter={defaultLocation}
         defaultZoom={zoomLevel}
       >
-      <LocationPin 
+      <LocationPin
         key={defaultLocation.lat}
         color={"green"}
         lat={defaultLocation.lat}

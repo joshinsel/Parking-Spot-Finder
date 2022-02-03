@@ -73,7 +73,7 @@ function removeSpot(curLocation) {
   } else {
     // 0.1 miles is a good enough approximation for "near you" at the moment.
     let closeSpots = findSpots(curLocation, 0.1);
-    if (closeSpots.length != 0) {
+    if (closeSpots.length !== 0) {
       let spotIndex = parkingSpots.indexOf(closeSpots[0]);
       parkingSpots.splice(spotIndex, 1);
     }
@@ -83,7 +83,7 @@ function removeSpot(curLocation) {
 export function findSpots(curLocation, radius) {
   let closeSpots = [];
   for (let i = 0; i < parkingSpots.length; i++) {
-    if (parkingSpots[i] == curLocation) {
+    if (parkingSpots[i] === curLocation) {
       // Skip self
       continue;
     }

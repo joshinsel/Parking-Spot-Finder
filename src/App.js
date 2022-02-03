@@ -23,11 +23,11 @@ const Layout = () => {
       <Header headerText = {"Welcome to Parking Pal!"}/>
       <nav className="nav">
         <ul>
-          <li>
-            <Link to="/">Home</Link>
+          <li >
+            <Link className="nav-item" to="/">Home</Link>
           </li>
-          <li>
-            <Link to="/find-spot">Find Spot</Link>
+          <li >
+            <Link className="nav-item" to="/find-spot">Find Spot</Link>
           </li>
         </ul>
       </nav>

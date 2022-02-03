@@ -34,7 +34,7 @@ const FindSpot = () => {
           />
         </div>
         <div className="select-section">
-          <form onSubmit={(e)=>submitHandler(e)}>
+          <form className="form" onSubmit={(e)=>submitHandler(e)}>
             <label htmlFor="cars">Choose Car Size:</label>
             <select name="cars"  className="car-size-select">
               <option value="small">Small</option>
