@@ -64,8 +64,12 @@ function distance(x1, y1, x2, y2) {
 let parkingSpots = [];
 let goldmanSachsOffice = {lat: 40.7131, lng: -74.0338, address: "200 West Street New York, NY 10282", name: "Goldman Sachs Tower" };
 let empireStateBuilding = {lat: 40.748817, lng: -73.985428, address: "20 W 34th St, New York, NY 10001", name: "Empire State Building"};
+let museumNaturalHistory = {lat: 40.7813, lng: -73.9740, address: "200 Central Park West, New York, NY 10024", name: "Museum of Natural History"};
+let metroMuseumArt = {lat: 40.7794, lng: -73.9632, address: "11 W 53rd St, New York, NY 10019", name: "Metropolitan Museum of Art"};
 parkingSpots.push(goldmanSachsOffice);
 parkingSpots.push(empireStateBuilding);
+parkingSpots.push(museumNaturalHistory);
+parkingSpots.push(metroMuseumArt);
 
 // testLocation (Macy's) is within 1 mile from empireStateBuilding
 let testLocation = {lat: 40.750797, lng: -73.989578, address: "151 W 34th St, New York, NY 10001", name: "Macy's"};
