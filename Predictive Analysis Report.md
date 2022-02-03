@@ -659,4 +659,3 @@ predictions[predictions.latitude > -80].plot(
 
 
 We hope to use substantial data and expand on the prediction with a more accurate model to further benefit the Parking Pal app users.
->>>>>>> 41896a21df54f76110af542435c388d3c8883edb
