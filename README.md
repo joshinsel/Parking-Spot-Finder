@@ -1,1 +1,0 @@
-# Parking Spot Finder
